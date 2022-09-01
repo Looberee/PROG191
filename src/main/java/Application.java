@@ -389,14 +389,8 @@ public boolean validID(String id) {
             JOptionPane.showMessageDialog(this, "Please enter the ID of student");
         } else if (txtName.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Please enter the name of student");
-        } else if (chDate.isEnabled()) {
-            {
-                try {
-                    Date d = chDate.getDate();
-                } catch (Exception e) {
-                    JOptionPane.showMessageDialog(this, "Please enter date");
-                }
-            }
+        } else if (chDate.getDate() == null) {
+            JOptionPane.showMessageDialog(this, "SSSS");
         } else if (validID(txtID.getText())) {
             JOptionPane.showMessageDialog(this, "Invalid ID");
 
